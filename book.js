@@ -34,8 +34,8 @@ class EBook extends Book{
     }
 
     getInfo(){
-        super.getInfo()
         return `
+        ${super.getInfo()}
         Формат: '${this.format}', 
         Размер: '${this.size}'
         `
@@ -50,15 +50,17 @@ class EBook extends Book{
 
 let book1 = new Book("1984","Оруэлл",1984)
 let book2 = new Book("Преступление и наказание", "Ф.М. Достоевский", 1880)
-let eBook = new EBook("том сойер", "М.твенн", 1950, "pdf", "247 Mb" )
+let eBook = new EBook("том сойер", "М.твенн", "1950", "pdf", "247 Mb" )
 
 
-console.log(book1.getInfo())
-console.log(book2.getInfo())
-console.log(eBook.getInfo())
+// console.log(book1.getInfo())
+// console.log(book2.getInfo())
+// console.log(eBook.getInfo())
 
-book2.newTitle = "Идиот"
-console.log(book2.getInfo())
+// book2.newTitle = "Идиот"
+// console.log(book2.getInfo())
 
-eBook.newSize = "222 MB"
+// eBook.newSize = "222 MB"
+// console.log(eBook.getInfo())
+
 console.log(eBook.getInfo())
